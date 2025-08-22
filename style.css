@@ -60,7 +60,22 @@ body {
 }
 
 .product {
+  margin: 1rem;
   border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.product__image--desktop {
+  display: none;
+}
+
+.product__image--mobile {
+  display: block;
+}
+
+.product__content {
+  background-color: var(--white);
+  padding: 2rem;
 }
 
 .product__category {
@@ -69,6 +84,7 @@ body {
   letter-spacing: 4px;
   font-weight: 500;
   font-size: 0.9rem;
+  padding: 0.5rem 0 1rem;
 }
 
 .product__title {
@@ -76,15 +92,13 @@ body {
   font-family: "Fraunces", serif;
   font-size: 2.3rem;
   line-height: 100%;
-}
-
-.product__content {
-  background-color: var(--white);
+  padding: 0 0.4rem 1rem 0;
 }
 
 .product__description {
   color: var(--grey);
   line-height: 150%;
+  padding: 0 1rem 1.5rem 0;
 }
 
 .product__pricing {
@@ -99,64 +113,31 @@ body {
 
 .product__old-price {
   color: var(--grey);
-  text-decoration: line-through;
+  padding: 0.7rem 0 0 1.5rem;
 }
 
 .product__button {
   background-color: var(--green-500);
   color: var(--white);
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-weight: 700;
   border-radius: 0.5rem;
   cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  max-width: 20rem;
+  margin: 1rem auto;
+  transition: background-color 0.3s ease;
 }
 
 .product__button:hover {
   background-color: var(--green-700);
 }
 
-@media (min-width: 320px) {
-  .product__image--desktop {
-    display: none;
-  }
-
-  .product__image--mobile {
-    display: block;
-  }
-
-  .product {
-    margin: 1rem;
-    overflow: hidden;
-  }
-
-  .product__content {
-    padding: 2rem;
-  }
-
-  .product__category {
-    padding: 0.5rem 0 1rem;
-  }
-
-  .product__title {
-    padding: 0 0.4rem 1rem 0;
-  }
-
-  .product__description {
-    padding: 0 1rem 1.5rem 0;
-  }
-
-  .product__old-price {
-    padding: 0.7rem 0 0 1.5rem;
-  }
-
-  .product__button {
-    padding: 1rem 7rem;
-    margin: 1rem auto;
-  }
-}
-
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .product {
     display: flex;
   }
@@ -169,10 +150,6 @@ body {
     display: none;
   }
 
-  .product__title {
-    padding: 0 0.7rem 1rem 0;
-  }
-
   .product__images {
     max-width: 22rem;
   }
@@ -181,12 +158,11 @@ body {
     max-width: 22rem;
   }
 
-  .product__description {
-    padding: 1rem 0.5rem 2.3rem 0;
+  .product__title {
+    padding: 0 0.7rem 1rem 0;
   }
 
-  .product__button {
-    padding: 1rem 4.8rem;
-    margin: 2.4rem auto 0;
+  .product__description {
+    padding: 1rem 0.5rem 2.3rem 0;
   }
 }
